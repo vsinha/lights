@@ -1,3 +1,4 @@
+/*
 #include <Adafruit_NeoPixel.h>
 #define LEDPIN 6 // connect the Data from the strip to this pin on the Arduino
 #define NUMBER_PIXELS 1440 // the number of pixels in your LED strip
@@ -205,3 +206,4 @@ void loop() {
 // {
 //     return color & 0xFF;
 // }
+*/
