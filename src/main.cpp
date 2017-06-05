@@ -12,6 +12,8 @@
 #define LEDPIN 7 // connect the Data from the strip to this pin on the Arduino
 #define NUMBER_PIXELS 1440 // the number of pixels in your LED strip
 
+namespace old {
+
 Adafruit_NeoPixel strip = Adafruit_NeoPixel(NUMBER_PIXELS, LEDPIN, NEO_GRB + NEO_KHZ800);
 int numPixels = strip.numPixels();
 
@@ -150,25 +152,27 @@ void drawPoints() {
     }
 }
 
-void setup()
-{
-    pinMode(LEDPIN, OUTPUT);
+// void setup()
+// {
+//     pinMode(LEDPIN, OUTPUT);
+//
+//     randomSeed(analogRead(0));
+//
+//     strip.begin();
+//     strip.setBrightness(50);
+//
+//     for (uint i = 0; i < numPoints; i++) {
+//         points[i] = {0, 0};
+//     }
+// }
+//
+// void loop() {
+//     columnWipe();
+//
+//     randomizePoints();
+//     drawPoints();
+//
+//     strip.show();
+// }
 
-    randomSeed(analogRead(0));
-
-    strip.begin();
-    strip.setBrightness(50);
-
-    for (uint i = 0; i < numPoints; i++) {
-        points[i] = {0, 0};
-    }
-}
-
-void loop() {
-    columnWipe();
-
-    randomizePoints();
-    drawPoints();
-
-    strip.show();
 }
